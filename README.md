@@ -1,6 +1,6 @@
 # RestBase
 
-[![Python](https://img.shields.io/pypi/pyversions/restbase-cli)](https://pypi.org/project/restbase-cli/)
+[![Python](https://img.shields.io/badge/restbase-cli)](https://pypi.org/project/restbase-cli/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![GitHub Repo](https://img.shields.io/badge/github-repo-black?logo=github)](https://github.com/soumyadeep423/RestBase)
 
