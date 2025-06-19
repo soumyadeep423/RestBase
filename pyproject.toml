@@ -1,6 +1,6 @@
 [project]
 name = "restbase-cli"
-version = "0.1.0"
+version = "0.0.1"
 description = "Sync any REST API to PostgreSQL with schema inference"
 authors = [
   { name="Soumyadeep Das", email="soumyadeep.das423@gmail.com" }
