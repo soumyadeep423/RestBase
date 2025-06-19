@@ -1,56 +1,61 @@
 # RestBase
 
-**RestBase** is a Python-based tool that allows you to fetch data from any REST API and sync it directly into a PostgreSQL database. It intelligently infers the schema from JSON responses and creates tables dynamically. Designed with automation, flexibility, and developer ease-of-use in mind, RestBase is perfect for data ingestion, analytics, or prototyping workflows.
+[![Python](https://img.shields.io/pypi/pyversions/restbase-cli)](https://pypi.org/project/restbase-cli/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![GitHub Repo](https://img.shields.io/badge/github-repo-black?logo=github)](https://github.com/soumyadeep423/RestBase)
+
+**RestBase** is a Python-based CLI tool that lets you fetch data from any REST API and sync it directly into a PostgreSQL database. It automatically infers table schemas from JSON responses, creates tables, and inserts data — no SQL or ORM required.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Interactive config builder (no manual YAML editing)
-- 🌐 Supports query parameters per endpoint
-- 🔍 Auto-infers table schema from API JSON responses
-- 📦 Inserts nested JSON as `JSONB` fields in PostgreSQL
-- 🛠 Creates tables automatically, only if they don't exist
-- ⚡ Fast and simple CLI usage
+- 🌐 Query parameter support per endpoint
+- 🔍 Automatic schema inference from JSON
+- 📦 Nested JSON handled as `JSONB` columns
+- 🛠 Table creation only if not already present
+- ⚡ Fast, minimal CLI
+- ✅ Interactive config builder (no manual editing)
 
 ---
 
 ## 📦 Installation
 
-### Install from source
-```bash
-pip install .
-```
+Install directly from [PyPI](https://pypi.org/project/restbase-cli):
 
-### Install in editable (dev) mode
 ```bash
-pip install -e .
-```
+pip install restbase-cli
+````
 
 ---
 
-## 🔧 Usage
 
-### Run as CLI
 ```bash
 restbase
 ```
 
-### Or use as Python module
+### Or via Python module
+
 ```bash
 python -m restbase
 ```
 
-### First time?
-The tool will automatically prompt you to configure:
-- API base URL and endpoints (with query params)
-- PostgreSQL connection credentials
+---
 
-A `config.yaml` file will be generated.
+## 🛠 First-Time Setup
+
+When you first run `restbase`, it will ask you for:
+
+* API base URL and endpoints
+* Optional query parameters
+* PostgreSQL credentials
+
+This generates a `config.yaml` file used for syncing.
 
 ---
 
 ## 🧪 Example `config.yaml`
+
 ```yaml
 api:
   base_url: https://api.openbrewerydb.org/v1
@@ -69,22 +74,39 @@ postgres:
 
 ---
 
-## 🧰 Tech Stack
-- Python 3.7+
-- PostgreSQL
-- `requests`, `psycopg2-binary`, `PyYAML`
+## 🔧 Tech Stack
 
----
-
-## 📝 License
-This project is licensed under the [MIT License](LICENSE).
+* Python 3.7+
+* PostgreSQL
+* Libraries: `requests`, `psycopg2-binary`, `PyYAML`
 
 ---
 
 ## 🙋 Contributing
-Pull requests are welcome. If you'd like to contribute new features or improve the project, feel free to fork and submit a PR.
+
+Pull requests are welcome!
+
+To run the project locally:
+
+```bash
+git clone https://github.com/soumyadeep423/restbase-cli.git
+cd restbase-cli
+pip install .
+pip install -e . #edit mode
+restbase
+```
 
 ---
 
-## 📫 Contact
-Made with ❤️ by Soumyadeep. Reach me at [soumyadeep.das423@gmail.com].
+## 📝 License
+
+Licensed under the [MIT License](LICENSE).
+
+---
+
+## 📫 Author
+
+**Soumyadeep Das**
+GitHub: [@soumyadeep423](https://github.com/soumyadeep423)
+
+---
